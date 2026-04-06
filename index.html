@@ -1,0 +1,315 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <meta name="description" content="die Hummussia — Authentic hummus restaurant in Berlin, since 2018. Fresh, handcrafted hummus plates inspired by the Middle East." />
+  <title>die Hummussia · Berlin</title>
+  <link rel="stylesheet" href="css/styles.css" />
+</head>
+<body>
+
+  <!-- ===================== NAVIGATION ===================== -->
+  <nav class="nav" role="navigation" aria-label="Main navigation">
+    <div class="nav__inner">
+      <a href="#hero" class="nav__logo"><span>die</span> Hummussia</a>
+
+      <ul class="nav__links">
+        <li><a href="#menu">Menu</a></li>
+        <li><a href="#about">About</a></li>
+        <li><a href="#contact">Contact</a></li>
+      </ul>
+
+      <button
+        id="hamburger"
+        class="nav__hamburger"
+        aria-label="Toggle navigation menu"
+        aria-expanded="false"
+        aria-controls="mobileNav"
+      >
+        <span></span>
+        <span></span>
+        <span></span>
+      </button>
+    </div>
+  </nav>
+
+  <!-- Mobile nav menu -->
+  <div id="mobileNav" class="nav__mobile" aria-hidden="true">
+    <a href="#menu">Menu</a>
+    <a href="#about">About</a>
+    <a href="#contact">Contact</a>
+  </div>
+
+  <!-- ===================== HERO ===================== -->
+  <section id="hero" class="hero">
+    <div class="hero__content">
+      <img
+        src="images/hummussia-yellow-bg.jpeg"
+        alt="die Hummussia logo — a clay pitcher surrounded by an olive wreath"
+        class="hero__logo"
+      />
+      <p class="hero__tagline">"The path is wiser than the traveler"</p>
+      <p class="hero__sub">Authentic hummus &nbsp;·&nbsp; Berlin since 2018</p>
+      <a href="#menu" class="btn btn--primary">Explore our menu</a>
+    </div>
+  </section>
+
+  <!-- ===================== MENU ===================== -->
+  <section id="menu" class="menu">
+    <div class="container">
+      <h2 class="section-title">What We Serve</h2>
+      <div class="divider"></div>
+      <p class="section-subtitle">Made fresh · Every day · With love</p>
+
+      <!-- Hummus Plates -->
+      <div class="menu-category">
+        <h3 class="menu-category__title">Hummus Plates</h3>
+        <div class="menu-category__line"></div>
+        <div class="menu-grid">
+
+          <div class="menu-card">
+            <div class="menu-card__info">
+              <p class="menu-card__name">Classic Hummus</p>
+              <p class="menu-card__desc">Silky chickpea hummus with tahini, lemon, garlic and olive oil. Served with warm pita.</p>
+            </div>
+            <span class="menu-card__price">€ 8.50</span>
+          </div>
+
+          <div class="menu-card">
+            <div class="menu-card__info">
+              <p class="menu-card__name">Msabbaha</p>
+              <p class="menu-card__desc">Warm whole chickpeas in light tahini sauce, drizzled with extra-virgin olive oil and paprika.</p>
+            </div>
+            <span class="menu-card__price">€ 9.50</span>
+          </div>
+
+          <div class="menu-card">
+            <div class="menu-card__info">
+              <p class="menu-card__name">Hummus with Mushrooms</p>
+              <p class="menu-card__desc">Classic hummus topped with sautéed wild mushrooms, thyme and a squeeze of lemon.</p>
+            </div>
+            <span class="menu-card__price">€ 11.00</span>
+          </div>
+
+          <div class="menu-card">
+            <div class="menu-card__info">
+              <p class="menu-card__name">Hummus Foul</p>
+              <p class="menu-card__desc">Hummus layered with slow-cooked fava beans, cumin, chili flakes and fresh parsley.</p>
+            </div>
+            <span class="menu-card__price">€ 10.50</span>
+          </div>
+
+        </div>
+      </div>
+
+      <!-- Extras & Sides -->
+      <div class="menu-category">
+        <h3 class="menu-category__title">Extras &amp; Sides</h3>
+        <div class="menu-category__line"></div>
+        <div class="menu-grid">
+
+          <div class="menu-card">
+            <div class="menu-card__info">
+              <p class="menu-card__name">Warm Pita Basket</p>
+              <p class="menu-card__desc">Three freshly baked pillowy pitas, straight from the oven.</p>
+            </div>
+            <span class="menu-card__price">€ 2.50</span>
+          </div>
+
+          <div class="menu-card">
+            <div class="menu-card__info">
+              <p class="menu-card__name">Israeli Salad</p>
+              <p class="menu-card__desc">Finely diced tomatoes, cucumber, onion and parsley with lemon dressing.</p>
+            </div>
+            <span class="menu-card__price">€ 5.00</span>
+          </div>
+
+          <div class="menu-card">
+            <div class="menu-card__info">
+              <p class="menu-card__name">Pickles &amp; Olives</p>
+              <p class="menu-card__desc">A seasonal selection of house-pickled vegetables and marinated olives.</p>
+            </div>
+            <span class="menu-card__price">€ 4.50</span>
+          </div>
+
+        </div>
+      </div>
+
+      <!-- Drinks -->
+      <div class="menu-category">
+        <h3 class="menu-category__title">Drinks</h3>
+        <div class="menu-category__line"></div>
+        <div class="menu-grid">
+
+          <div class="menu-card">
+            <div class="menu-card__info">
+              <p class="menu-card__name">Fresh Lemonade</p>
+              <p class="menu-card__desc">Hand-squeezed with mint and a hint of rosewater. Still or sparkling.</p>
+            </div>
+            <span class="menu-card__price">€ 4.00</span>
+          </div>
+
+          <div class="menu-card">
+            <div class="menu-card__info">
+              <p class="menu-card__name">Ayran</p>
+              <p class="menu-card__desc">Chilled salted yoghurt drink — the perfect partner to hummus.</p>
+            </div>
+            <span class="menu-card__price">€ 3.50</span>
+          </div>
+
+          <div class="menu-card">
+            <div class="menu-card__info">
+              <p class="menu-card__name">Turkish Coffee</p>
+              <p class="menu-card__desc">Rich, dark and fragrant. Served with a small piece of halva.</p>
+            </div>
+            <span class="menu-card__price">€ 3.00</span>
+          </div>
+
+        </div>
+      </div>
+
+    </div>
+  </section>
+
+  <!-- ===================== ABOUT ===================== -->
+  <section id="about" class="about">
+    <div class="container">
+      <h2 class="section-title">Our Story</h2>
+      <div class="divider"></div>
+      <p class="section-subtitle">Rooted in tradition · Grown in Berlin</p>
+
+      <div class="about__grid">
+        <div class="about__text">
+          <h3>From the Levant to Prenzlauer Berg</h3>
+          <p>
+            die Hummussia was born in 2018 from a simple belief: that the best food is honest food.
+            Hummus — ground chickpeas, tahini, lemon and garlic — has nourished people across the
+            Middle East for centuries. We bring that tradition to Berlin, unchanged and uncompromised.
+          </p>
+          <p>
+            Every plate starts with chickpeas soaked overnight and cooked until perfectly tender.
+            Our tahini is stone-ground, our lemons squeezed fresh each morning, our olive oil
+            imported directly from small family farms. No shortcuts. No compromises.
+          </p>
+          <p>
+            We believe a meal is a journey. Pull up a chair, tear a piece of pita, and let the
+            food do the talking. You are always welcome at our table.
+          </p>
+        </div>
+
+        <div class="about__quote">
+          <blockquote>
+            "The path is wiser<br />than the traveler"
+          </blockquote>
+          <cite>— die Hummussia, Berlin · since 2018</cite>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- ===================== CONTACT & HOURS ===================== -->
+  <section id="contact" class="contact">
+    <div class="container">
+      <h2 class="section-title">Find Us</h2>
+      <div class="divider"></div>
+      <p class="section-subtitle">We're open every day — come hungry</p>
+
+      <div class="contact__grid">
+
+        <!-- Hours -->
+        <div class="contact__hours">
+          <h3 style="font-family: var(--font-heading); font-size: 1.5rem; color: var(--brown); margin-bottom: 1.25rem;">Opening Hours</h3>
+          <table class="hours-table">
+            <tbody>
+              <tr>
+                <td>Monday – Tuesday</td>
+                <td>12:00 – 21:00</td>
+              </tr>
+              <tr>
+                <td>Wednesday</td>
+                <td>Closed</td>
+              </tr>
+              <tr>
+                <td>Thursday – Friday</td>
+                <td>12:00 – 22:00</td>
+              </tr>
+              <tr>
+                <td>Saturday</td>
+                <td>11:00 – 22:00</td>
+              </tr>
+              <tr>
+                <td>Sunday</td>
+                <td>11:00 – 20:00</td>
+              </tr>
+            </tbody>
+          </table>
+        </div>
+
+        <!-- Info & Map -->
+        <div class="contact__info">
+          <h3>Get in Touch</h3>
+
+          <div class="info-item">
+            <span class="info-item__icon">📍</span>
+            <div class="info-item__text">
+              <strong>Address</strong>
+              Musterstraße 12, 10435 Berlin<br />
+              (Prenzlauer Berg)
+            </div>
+          </div>
+
+          <div class="info-item">
+            <span class="info-item__icon">📞</span>
+            <div class="info-item__text">
+              <strong>Phone</strong>
+              +49 (0) 30 123 456 78
+            </div>
+          </div>
+
+          <div class="info-item">
+            <span class="info-item__icon">✉️</span>
+            <div class="info-item__text">
+              <strong>Email</strong>
+              hello@hummussia.de
+            </div>
+          </div>
+
+          <div class="info-item">
+            <span class="info-item__icon">🚇</span>
+            <div class="info-item__text">
+              <strong>Getting here</strong>
+              U2 Eberswalder Str. · Tram M2
+            </div>
+          </div>
+
+          <!-- Google Maps embed — replace src with your real embed URL from maps.google.com -->
+          <div class="map-container">
+            <iframe
+              src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d2426.0!2d13.4!3d52.5!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x0%3A0x0!2zUHJlbnpsYXVlciBCZXJn!5e0!3m2!1sen!2sde!4v1234567890"
+              allowfullscreen=""
+              loading="lazy"
+              referrerpolicy="no-referrer-when-downgrade"
+              title="Hummussia location on Google Maps"
+            ></iframe>
+          </div>
+        </div>
+
+      </div>
+    </div>
+  </section>
+
+  <!-- ===================== FOOTER ===================== -->
+  <footer class="footer">
+    <p class="footer__logo">die Hummussia</p>
+    <div class="footer__social">
+      <a href="#" aria-label="Instagram">Instagram</a>
+      <a href="#" aria-label="Facebook">Facebook</a>
+      <a href="#" aria-label="Google Maps">Google Maps</a>
+    </div>
+    <p class="footer__copy">&copy; 2024 die Hummussia · Berlin · Crafted with love</p>
+  </footer>
+
+  <script src="js/main.js"></script>
+</body>
+</html>
