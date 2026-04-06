@@ -1,0 +1,11 @@
+# Claude Code settings (local/sensitive)
+.mcp.local.json
+.claude/settings.local.json
+
+# Environment files
+.env
+.env.local
+
+# OS
+.DS_Store
+Thumbs.db

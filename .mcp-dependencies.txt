@@ -1,0 +1,5 @@
+# MCP Server Dependencies
+# These are global npm packages required for Claude Code MCP servers
+# Install with: npm install -g <package-name>
+
+hostinger-api-mcp
