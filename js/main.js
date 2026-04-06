@@ -57,4 +57,93 @@
 
   window.addEventListener('scroll', highlightNav, { passive: true });
   highlightNav();
+
+  // --- Menu: load from menu.csv ---
+
+  function escapeHtml(str) {
+    return String(str)
+      .replace(/&/g, '&amp;')
+      .replace(/</g, '&lt;')
+      .replace(/>/g, '&gt;')
+      .replace(/"/g, '&quot;');
+  }
+
+  function parseCSV(text) {
+    const lines = text.trim().split('\n');
+    const headers = lines[0].split(',').map(function (h) { return h.trim(); });
+    return lines.slice(1).map(function (line) {
+      const fields = [];
+      let field = '';
+      let inQuotes = false;
+      for (let i = 0; i < line.length; i++) {
+        const ch = line[i];
+        if (ch === '"') {
+          inQuotes = !inQuotes;
+        } else if (ch === ',' && !inQuotes) {
+          fields.push(field);
+          field = '';
+        } else {
+          field += ch;
+        }
+      }
+      fields.push(field);
+      const obj = {};
+      headers.forEach(function (h, i) {
+        obj[h] = (fields[i] || '').trim();
+      });
+      return obj;
+    });
+  }
+
+  function formatPrice(price) {
+    const n = parseFloat(price);
+    if (isNaN(n)) return price;
+    return '€\u00a0' + n.toFixed(2);
+  }
+
+  function renderMenu(items) {
+    const container = document.getElementById('menu-content');
+    if (!container) return;
+
+    const categories = {};
+    const categoryOrder = [];
+    items.forEach(function (item) {
+      if (!categories[item.category]) {
+        categories[item.category] = [];
+        categoryOrder.push(item.category);
+      }
+      categories[item.category].push(item);
+    });
+
+    let html = '';
+    categoryOrder.forEach(function (cat) {
+      html += '<div class="menu-category">';
+      html += '<h3 class="menu-category__title">' + escapeHtml(cat) + '</h3>';
+      html += '<div class="menu-category__line"></div>';
+      html += '<div class="menu-grid">';
+      categories[cat].forEach(function (item) {
+        html += '<div class="menu-card">';
+        html += '<div class="menu-card__info">';
+        html += '<p class="menu-card__name">' + escapeHtml(item.name) + '</p>';
+        html += '<p class="menu-card__desc">' + escapeHtml(item.description) + '</p>';
+        html += '</div>';
+        html += '<span class="menu-card__price">' + escapeHtml(formatPrice(item.price)) + '</span>';
+        html += '</div>';
+      });
+      html += '</div></div>';
+    });
+
+    container.innerHTML = html;
+  }
+
+  fetch('menu.csv')
+    .then(function (r) { return r.text(); })
+    .then(function (text) { renderMenu(parseCSV(text)); })
+    .catch(function () {
+      const c = document.getElementById('menu-content');
+      if (c) {
+        c.innerHTML = '<p class="menu-unavailable">Menu coming soon — <a href="mailto:info@hummussia.com">contact us</a> for details.</p>';
+      }
+    });
+
 })();

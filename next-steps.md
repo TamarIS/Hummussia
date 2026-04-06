@@ -1,8 +1,6 @@
 # next steps
-1. Generate social media accounts 
-    a. Facebook
-    b. Instagram
-2. update the links to these accounts. 
+1. read the existing website and identify components. 
+2. update the links to accounts based on the information bellow: 
 3. update the address: 
     a. update link to google map: 
     https://maps.app.goo.gl/4M6KdQNGt6ABAgGj7
