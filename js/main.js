@@ -58,7 +58,7 @@
   window.addEventListener('scroll', highlightNav, { passive: true });
   highlightNav();
 
-  // --- Menu: load from menu.csv ---
+  // --- Menu: load from menu.csv + category.csv ---
 
   function escapeHtml(str) {
     return String(str)
@@ -101,13 +101,17 @@
     return '€\u00a0' + n.toFixed(2);
   }
 
-  function renderMenu(items) {
+  function renderMenu(items, categoryDescs) {
     const container = document.getElementById('menu-content');
     if (!container) return;
 
+    const available = items.filter(function (item) {
+      return item.Available.toLowerCase() === 'yes';
+    });
+
     const categories = {};
     const categoryOrder = [];
-    items.forEach(function (item) {
+    available.forEach(function (item) {
       if (!categories[item.category]) {
         categories[item.category] = [];
         categoryOrder.push(item.category);
@@ -120,14 +124,21 @@
       html += '<div class="menu-category">';
       html += '<h3 class="menu-category__title">' + escapeHtml(cat) + '</h3>';
       html += '<div class="menu-category__line"></div>';
+      if (categoryDescs[cat]) {
+        html += '<p class="menu-category__desc">' + escapeHtml(categoryDescs[cat]) + '</p>';
+      }
       html += '<div class="menu-grid">';
       categories[cat].forEach(function (item) {
         html += '<div class="menu-card">';
         html += '<div class="menu-card__info">';
         html += '<p class="menu-card__name">' + escapeHtml(item.name) + '</p>';
-        html += '<p class="menu-card__desc">' + escapeHtml(item.description) + '</p>';
+        if (item.description) {
+          html += '<p class="menu-card__desc">' + escapeHtml(item.description) + '</p>';
+        }
         html += '</div>';
-        html += '<span class="menu-card__price">' + escapeHtml(formatPrice(item.price)) + '</span>';
+        if (item.price) {
+          html += '<span class="menu-card__price">' + escapeHtml(formatPrice(item.price)) + '</span>';
+        }
         html += '</div>';
       });
       html += '</div></div>';
@@ -136,9 +147,21 @@
     container.innerHTML = html;
   }
 
-  fetch('menu.csv')
-    .then(function (r) { return r.text(); })
-    .then(function (text) { renderMenu(parseCSV(text)); })
+  Promise.all([fetch('menu.csv'), fetch('category.csv')])
+    .then(function (responses) {
+      return Promise.all(responses.map(function (r) { return r.text(); }));
+    })
+    .then(function (texts) {
+      const items = parseCSV(texts[0]);
+      const catRows = parseCSV(texts[1]);
+      const categoryDescs = {};
+      catRows.forEach(function (row) {
+        if (row.Category && row.description) {
+          categoryDescs[row.Category] = row.description;
+        }
+      });
+      renderMenu(items, categoryDescs);
+    })
     .catch(function () {
       const c = document.getElementById('menu-content');
       if (c) {

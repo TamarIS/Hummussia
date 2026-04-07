@@ -1,15 +1,40 @@
-category,name,description,price
-Mains,Classic Hummus,"Silky chickpea hummus with tahini, lemon, garlic and olive oil. Served with warm pita.",8.50
-Mains,Msabbaha,"Warm whole chickpeas in light tahini sauce, drizzled with extra-virgin olive oil and paprika.",9.50
-Mains,Hummus with Mushrooms,"Classic hummus topped with sautéed wild mushrooms, thyme and a squeeze of lemon.",11.00
-Mains,Hummus Foul,"Hummus layered with slow-cooked fava beans, cumin, chili flakes and fresh parsley.",10.50
-Sides,Warm Pita Basket,"Three freshly baked pillowy pitas, straight from the oven.",2.50
-Sides,Israeli Salad,"Finely diced tomatoes, cucumber, onion and parsley with lemon dressing.",5.00
-Sides,Pickles & Olives,"A seasonal selection of house-pickled vegetables and marinated olives.",4.50
-Dessert,Halva Tart,"Silky sesame halva in a buttery shortcrust, drizzled with date syrup.",5.50
-Dessert,Knafeh,"Warm shredded pastry with sweet cheese, rose water syrup and crushed pistachios.",7.00
-Dessert,Date & Walnut Cake,"Moist and spiced with Medjool dates, walnuts and a hint of cardamom.",5.00
-Cook at Home,Hummus Kit,"Everything you need for perfect hummus at home: dried chickpeas, stone-ground tahini, spices and our recipe card.",14.00
-Cook at Home,Fresh Tahini Jar,"300g of our own stone-ground tahini, made from the finest Ethiopian sesame seeds.",8.00
-Cook at Home,Signature Spice Mix,"Our blend of cumin, paprika, sumac and za'atar. Perfect for seasoning hummus and everything else.",5.00
-Cook at Home,Pita Dough Kit,"Pre-mixed dough with step-by-step instructions to bake fresh pita at home. Makes 8 pitas.",6.00
+category,name,description,price,Available
+Mains,Hummus classic,,10,yes
+Mains,Hummus Complete,,11.5,yes
+Mains,Hummus Fava,,10,yes
+Mains,Hummus Chickpeas,,10,yes
+Mains,Hummus Tahini,,,yes
+Mains,Masabacha,,,yes
+Mains,New Dish comming soon,,,no
+Mains,Machlota,,,yes
+Extras,pita,,1,yes
+Extras,house salad,,4,yes
+Extras,lamb ragout,,6,yes
+Extras,Shawarma,,6,yes
+Extras,Falafel,,5,yes
+Extras,Cauliflower,,5,yes
+Extras,Warm Pita Basket,,2.5,yes
+Extras,Israeli Salad,,5,yes
+Extras,Pickles & Olives,,4.5,yes
+Extras,Shakshuka,,5,yes
+Salads,House Salad,,8,yes
+Salads,Spicy lentils,,7,yes
+Salads,Labaneh and cherry tomato confi with crispi pitta,,8,yes
+Big Plates,Falafel Plate,served with salads and hummus.,15,yes
+Big Plates,Shawarma Plate,served with salads and hummus.,18,yes
+Big Plates,Sabich Plate,served with salads and hummus.,17,yes
+Big Plates,Eggplant ragout Plate,served with salads and hummus.,16,yes
+Big Plates,Shakshuka,served with salads and hummus. maraguese+6,15,yes
+Big Plates,"Arack, cherry tomatoes, and shrimps, served with Labaneh",served with salads and hummus.,21,yes
+Big Plates,Cauliflower Plate,served with salads and hummus.,12,yes
+Dessert,Malabi,Creamy delight,5.5,yes
+Dessert,Sticky Toffee,Forbidden indulgance,7,yes
+Dessert,Chocolate creme,Pure heaven - Vegan,5,yes
+Deli,Hummus,300 g Hummus ,8,yes
+Deli,Tahini,300 Tahini ,8,yes
+Deli,Tbileh,Spicy soure sauce 100 g ,5,yes
+Deli,Uzi,Spicy soure sauce 100 g ,5,yes
+Deli,Shawarma spice,30 g,5,yes
+Deli,Shakshuka spice,30 g,5,yes
+Deli,Siniya spice,30 g,5,yes
+Deli,Masachan spice,30 g,5,yes
