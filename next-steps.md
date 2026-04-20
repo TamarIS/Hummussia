@@ -23,3 +23,10 @@
 
 9. for later: 
     a. setup tiktok account and add it's link. 
+
+
+## tasks per skill
+### creative
+* generate brand voice md
+* regenerate the deescription of the menu using the brand voice
+* 
