@@ -1,0 +1,35 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 200 200" width="200" height="200">
+  <defs>
+    <style>
+      @import url('https://fonts.googleapis.com/css2?family=Cormorant+Garamond:wght@300;400&amp;display=swap');
+    </style>
+  </defs>
+
+  <!-- Background -->
+  <rect width="200" height="200" fill="#F4EDD4"/>
+
+  <!-- Bowl: open arc -->
+  <path d="M 44,88 Q 100,148 156,88" stroke="#1A1814" stroke-width="2.5" fill="none" stroke-linecap="round"/>
+
+  <!-- Bowl rim: horizontal line -->
+  <line x1="38" y1="88" x2="162" y2="88" stroke="#1A1814" stroke-width="2" stroke-linecap="round"/>
+
+  <!-- Garnish: olive oil pool — small filled teardrop/circle offset left of center -->
+  <circle cx="84" cy="102" r="7" fill="#455F40" opacity="0.85"/>
+
+  <!-- Garnish: saffron dot accent -->
+  <circle cx="110" cy="108" r="4" fill="#C47C3A" opacity="0.9"/>
+
+  <!-- Tahini drizzle: a gentle arc line -->
+  <path d="M 78,95 Q 100,120 126,100" stroke="#8C5E3A" stroke-width="1.5" fill="none" stroke-linecap="round" opacity="0.7"/>
+
+  <!-- Monogram below bowl -->
+  <text x="100" y="178" text-anchor="middle"
+    font-family="'Cormorant Garamond', Georgia, serif"
+    font-weight="300"
+    font-size="11"
+    letter-spacing="0.35em"
+    fill="#1A1814">
+    DH
+  </text>
+</svg>
