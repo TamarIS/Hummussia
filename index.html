@@ -6,6 +6,7 @@
   <meta name="description" content="Die Hummussia — Hummus Culture, Berlin. Unpretentious Levantine food at the highest level. Opening May 21, 2026 at Kantstraße 127." />
   <title>Die Hummussia · Hummus Culture · Berlin</title>
   <link rel="stylesheet" href="css/styles.css" />
+  <link rel="icon" href="images/mark-icon.svg" type="image/svg+xml" />
 </head>
 <body>
 
@@ -44,12 +45,22 @@
   <!-- ===================== HERO ===================== -->
   <section id="hero" class="hero">
     <div class="hero__content">
-      <img
-        src="images/logo-light.svg"
-        alt="Die Hummussia — Hummus Culture, Berlin"
-        class="hero__logo"
-      />
-      <p class="hero__tagline">Hummus Culture.</p>
+      <!-- Inline SVG so Cormorant Garamond (loaded by CSS) renders correctly -->
+      <svg class="hero__logo" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 640 240" role="img" aria-label="Die Hummussia">
+        <line x1="148" y1="88" x2="238" y2="88" stroke="#8C5E3A" stroke-width="0.75"/>
+        <line x1="402" y1="88" x2="492" y2="88" stroke="#8C5E3A" stroke-width="0.75"/>
+        <text x="320" y="96" text-anchor="middle"
+          font-family="'Cormorant Garamond', Georgia, serif"
+          font-weight="300" font-size="22" letter-spacing="14" fill="#1A1814">DIE</text>
+        <text x="320" y="162" text-anchor="middle"
+          font-family="'Cormorant Garamond', Georgia, serif"
+          font-weight="400" font-size="62" letter-spacing="5" fill="#1A1814">HUMMUSSIA</text>
+        <line x1="200" y1="178" x2="440" y2="178" stroke="#1A1814" stroke-width="0.5" opacity="0.25"/>
+        <text x="320" y="200" text-anchor="middle"
+          font-family="'Cormorant Garamond', Georgia, serif"
+          font-weight="300" font-size="12" letter-spacing="7" fill="#8C5E3A">HUMMUS CULTURE</text>
+      </svg>
+      <p class="hero__tagline">Grandmother's recipe. Berlin address.</p>
       <p class="hero__sub">Kantstraße · Berlin · Opening May 21, 2026</p>
       <a href="#menu" class="btn btn--primary">Explore our menu</a>
     </div>
